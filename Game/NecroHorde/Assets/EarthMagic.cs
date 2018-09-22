@@ -20,7 +20,7 @@ public class EarthMagic : MonoBehaviour {
 
     void Fire()
     {
-        GameObject WallInstance = Instantiate(Wall,
+        Instantiate(Wall,
             new Vector3(WallSpawnPos.position.x, 1, WallSpawnPos.position.z),
             new Quaternion(WallSpawnPos.rotation.x * 0, WallSpawnPos.rotation.y,
             WallSpawnPos.rotation.z * 0, WallSpawnPos.rotation.w));

@@ -5,6 +5,10 @@ using UnityEngine;
 public class LightningMagic : MonoBehaviour
 {
 
+    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FPC;
+    float baseWalkSpeed;
+    float baseRunSpeed;
+
     public Rigidbody LightningBolt;
     public float ConjureVelocity = 100;
     public Transform BoltSpawnPos;
@@ -13,15 +17,30 @@ public class LightningMagic : MonoBehaviour
     public float ManaDrain;
     public PlayerMana PM;
 
+    private void Start()
+    {
+        FPC = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
+        baseWalkSpeed = FPC.m_WalkSpeed;
+        baseRunSpeed = FPC.m_RunSpeed;
+    }
+
     private void Update()
     {
         if (Input.GetMouseButton(0) && PM.mana > 0 && Time.time > ManaDrainPoint + 1.5f)
         {
             Fire();
             PM.mana -= ManaDrain * Time.deltaTime;
+            FPC.m_WalkSpeed = 0;
+            FPC.m_RunSpeed = 0;
         }
 
-        if(PM.mana < 1)
+        if (Input.GetMouseButtonUp(0))
+        {
+            FPC.m_WalkSpeed = baseWalkSpeed;
+            FPC.m_RunSpeed = baseRunSpeed;
+        }
+
+        if (PM.mana < 1)
         {
             ManaDrainPoint = Time.time;
         }
