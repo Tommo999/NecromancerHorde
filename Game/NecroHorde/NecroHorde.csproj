@@ -403,9 +403,16 @@
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
-    <Compile Include="Assets\EarthMagic.cs" />
-    <Compile Include="Assets\ItemBorderScript.cs" />
+    <Compile Include="Assets\Field.cs" />
+    <Compile Include="Assets\Flame.cs" />
+    <Compile Include="Assets\Flamethrower.cs" />
+    <Compile Include="Assets\PlayerStamina.cs" />
+    <Compile Include="Assets\PlayerUltimate.cs" />
+    <Compile Include="Assets\Scripts\ArcaneBeamSpawner.cs" />
+    <Compile Include="Assets\Scripts\ArcaneBlock.cs" />
+    <Compile Include="Assets\Scripts\BossSpawner.cs" />
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
+    <Compile Include="Assets\Scripts\EarthMagic.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyAttacking.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
@@ -416,12 +423,14 @@
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\FireMagic.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
+    <Compile Include="Assets\Scripts\ItemBorderScript.cs" />
     <Compile Include="Assets\Scripts\LightningBolt.cs" />
     <Compile Include="Assets\Scripts\LightningMagic.cs" />
+    <Compile Include="Assets\Scripts\MageMagicSpawnRotation.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMana.cs" />
     <Compile Include="Assets\Scripts\Sword.cs" />
-    <Compile Include="Assets\Wall.cs" />
+    <Compile Include="Assets\Scripts\Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\Mobile\Resources\RFX4_Bloom.shader" />

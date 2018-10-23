@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class FireMagic : MonoBehaviour {
 
-    public Rigidbody FireBall;
-    public float ConjureVelocity = 25;
-    public Transform FireBallSpawnPos;
-    public float ManaCost;
-    public PlayerMana PM;
+    public Rigidbody FireBall; //stores the fireball prefab
+    public float ConjureVelocity = 25; //decides how fast the fireball is thrown
+    public Transform FireBallSpawnPos; //stores the position that the fireball is to be spawned at
+    public float ManaCost; //how much mana is taken away when it is cast
+    public PlayerMana PM; //allows easy access to the player mana
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && PM.mana > ManaCost)
+        if(Input.GetMouseButtonDown(0) && PM.mana > ManaCost) //activates on left click and when there is enough mana
         {
-            Fire();
-            PM.mana -= ManaCost;
+            Fire(); //calls the fireball throwing method
+            PM.mana -= ManaCost; //takes away the mana cost from the total mana pool
         }
     }
 
@@ -23,8 +23,8 @@ public class FireMagic : MonoBehaviour {
     {
         Rigidbody FBinstance = Instantiate(FireBall,
             FireBallSpawnPos.position,
-            FireBallSpawnPos.rotation) as Rigidbody;
+            FireBallSpawnPos.rotation) as Rigidbody; //spawns the fireball and stores it as a Rigidbody
 
-        FBinstance.velocity = FireBallSpawnPos.forward * ConjureVelocity;
+        FBinstance.velocity = FireBallSpawnPos.forward * ConjureVelocity; //determines how fast forward the ball is thrown
     }
 }

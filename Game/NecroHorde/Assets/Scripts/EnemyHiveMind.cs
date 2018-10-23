@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class EnemyHiveMind : MonoBehaviour {
 
-    public EnemyAI EnemyAI;
-    public GameObject Player;
+    public EnemyAI EnemyAI; //stores the enemy AI position
+    public GameObject Player; //stores the players gameobject
 
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        EnemyAI.PlayerTrans = Player.transform;
+        Player = GameObject.FindGameObjectWithTag("Player"); //finds the player
+        EnemyAI.PlayerTrans = Player.transform; //sets the enemy's destination to the players position
     }
 
     private void FixedUpdate()
     {
-        EnemyAI.PlayerTrans = Player.transform;
+        EnemyAI.PlayerTrans = Player.transform; //sets the enemy's destination to the players position
     }
 
 }

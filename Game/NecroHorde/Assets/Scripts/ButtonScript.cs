@@ -6,21 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour {
 
-    Scene ThisScene;
+    Scene ThisScene; //stores the current scene for reloading
 
     private void Start()
     {
-        ThisScene = SceneManager.GetActiveScene();
+        ThisScene = SceneManager.GetActiveScene(); //assigns the current scene
     }
 
-    public void RestartButton()
+    public void RestartButton() //called when the restart button is pressed
     {
-        Time.timeScale = 1;
-        SceneManager.LoadScene(ThisScene.name);
+        Time.timeScale = 1; //sets the timescale to normal speed
+        SceneManager.LoadScene(ThisScene.name); //used to reload the scene
     }
 	
-    public void ExitButton()
+    public void ExitButton() //called when the exit button is pressed
     {
-        Application.Quit();
+        Application.Quit(); //Quits the application when it is a full build
     }
 }

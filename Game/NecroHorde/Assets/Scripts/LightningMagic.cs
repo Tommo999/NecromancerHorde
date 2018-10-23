@@ -5,62 +5,71 @@ using UnityEngine;
 public class LightningMagic : MonoBehaviour
 {
 
-    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FPC;
-    float baseWalkSpeed;
-    float baseRunSpeed;
+    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FPC; //stores the player movement script
+    float baseWalkSpeed; //stores the normal walk speed
+    float baseRunSpeed; //stores the normal run speed
 
-    public Rigidbody LightningBolt;
-    public float ConjureVelocity = 100;
-    public Transform BoltSpawnPos;
-    public float Spread;
-    public float ManaDrainPoint;
-    public float ManaDrain;
-    public PlayerMana PM;
+    public Rigidbody LightningBolt; //stores the lightning bolt object
+    public float ConjureVelocity = 100; //how fast the bolt is thrown
+    public Transform BoltSpawnPos; //where the bolt is spawned
+    public float Spread; //how far out the bolts spread
+    public float ManaDrainPoint; //stores the time since last run out of mana
+    public float ManaDrain; //how fast the mana drains
+    public PlayerMana PM; //stores the player mana script
 
     private void Start()
     {
-        FPC = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
-        baseWalkSpeed = FPC.m_WalkSpeed;
-        baseRunSpeed = FPC.m_RunSpeed;
+        FPC = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>(); //finds and stores the player movement
+        baseWalkSpeed = FPC.m_WalkSpeed; //stores the normal walk speed
+        baseRunSpeed = FPC.m_RunSpeed; //stores the normal run speed
     }
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && PM.mana > 0 && Time.time > ManaDrainPoint + 1.5f)
+        if (Input.GetMouseButton(0) && PM.mana > 0 && Time.time > ManaDrainPoint + 1.5f) //activates when mouse button pressed down
         {
-            Fire();
-            PM.mana -= ManaDrain * Time.deltaTime;
-            FPC.m_WalkSpeed = 0;
-            FPC.m_RunSpeed = 0;
+            Fire(); //fires the lightning magic
+            PM.mana -= ManaDrain * Time.deltaTime; //takes away mana at a constant rate
+            FPC.m_WalkSpeed = 0; //sets the walk speed to 0
+            FPC.m_RunSpeed = 0; //sets the run speed to 0
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)) //activates when left click let go of
         {
-            FPC.m_WalkSpeed = baseWalkSpeed;
-            FPC.m_RunSpeed = baseRunSpeed;
+            FPC.m_WalkSpeed = baseWalkSpeed; //resets the walk speed
+            FPC.m_RunSpeed = baseRunSpeed; //resets the run speed
         }
 
-        if (PM.mana < 1)
+        if (PM.mana < 1) //activates when theres less than one mana
         {
-            ManaDrainPoint = Time.time;
+            ManaDrainPoint = Time.time; //sets the mana drain point
+        }
+    }
+
+    private void OnDisable() //resets the run speed
+    {
+        if (FPC != null)
+        {
+            FPC.m_WalkSpeed = baseWalkSpeed; //resets the walk speeds
+            FPC.m_RunSpeed = baseRunSpeed; //resets the run speeds
         }
     }
 
     void Fire()
     {
-        for (int BoltsSpawned = 0; BoltsSpawned < 2; BoltsSpawned++)
+        for (int BoltsSpawned = 0; BoltsSpawned < 2; BoltsSpawned++) //activates three times
         {
             Rigidbody LBinstance = Instantiate(LightningBolt,
                 BoltSpawnPos.position,
-                BoltSpawnPos.rotation) as Rigidbody;
+                BoltSpawnPos.rotation) as Rigidbody; //spawns the rigidbody
 
             LBinstance.gameObject.transform.rotation =
                 new Quaternion(LBinstance.gameObject.transform.rotation.x + Random.Range(-Spread, Spread),
                 LBinstance.gameObject.transform.rotation.y + Random.Range(-Spread, Spread),
                 LBinstance.gameObject.transform.rotation.z + Random.Range(-Spread, Spread),
-                LBinstance.gameObject.transform.rotation.w + Random.Range(-Spread, Spread));
+                LBinstance.gameObject.transform.rotation.w + Random.Range(-Spread, Spread)); //adds the spread
 
-            LBinstance.velocity = LBinstance.transform.forward * ConjureVelocity;
+            LBinstance.velocity = LBinstance.transform.forward * ConjureVelocity; //shoots the lightning forward
         }
     }
 }

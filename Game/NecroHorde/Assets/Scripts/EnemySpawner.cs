@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
 
-    EnemyWaveController EWC;
-    public GameObject[] Enemies;
+    EnemyWaveController EWC; //stores the wave controller for easy variable calling UNUSED
+    public GameObject[] Enemies; //stores a range of different enemies
 
-    private void Start()
+    public void SpawnEnemy(int Wave) //called by the enemy wave spawner
     {
-    }
+        
 
-    public void SpawnEnemy(int Wave)
-    {
-        for (int spawned = 0; spawned < Wave; spawned++)
+        for (int spawned = 0; spawned < Wave; spawned++) //spawns an enemy for each wave that has passed
         {
             Instantiate(Enemies[Random.Range(0, Enemies.Length)],
-                gameObject.transform);
+                gameObject.transform); //chooses a random enemy to spawn
         }
     }
 }

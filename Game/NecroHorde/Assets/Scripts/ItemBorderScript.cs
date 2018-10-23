@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemBorderScript : MonoBehaviour {
 
-    public Transform[] SideImagesPos = new Transform[4];
+    public Transform[] SideImagesPos = new Transform[4]; //stores the different positions for the square
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,5 +24,9 @@ public class ItemBorderScript : MonoBehaviour {
         {
             this.transform.position = SideImagesPos[3].position;
         }
+
+        //You press the button and if the position exists
+        //sets the border to the correct position
+
     }
 }

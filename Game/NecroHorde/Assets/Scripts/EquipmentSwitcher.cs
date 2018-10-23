@@ -5,39 +5,38 @@ using UnityEngine;
 public class EquipmentSwitcher : MonoBehaviour {
 
     //Notes on equipment
-    //1 & 2 is Magic
-    //3 is Melee
-    //4 is Potion or Thrown
+    //1, 2 & 3 are Magic
+    //4 is melee
     //F to toggle Torch
     //M to toggle Map
 
-    public GameObject[] Equipments = new GameObject[4];
+    public GameObject[] Equipments = new GameObject[4]; //stores the different equipment in an array
 
-    public GameObject Torch;
-    public GameObject Map;
+    public GameObject Torch; //stores the torch
+    public GameObject Map; //stores the map
 
     private void Start()
     {
-        foreach (GameObject Equipment in Equipments)
+        foreach (GameObject Equipment in Equipments) //does the actions for each equipment
         {
-            if (Equipment != null)
-            Equipment.SetActive(false);
+            if (Equipment != null) //will activate if the equipment has something assigned
+            Equipment.SetActive(false); //makes the equiment uninteractable
         }
     }
 
     // Update is called once per frame
     void Update () {
         //Equip Magic 1
-		if (Input.GetKeyDown(KeyCode.Alpha1) && Equipments[0] != null)
+		if (Input.GetKeyDown(KeyCode.Alpha1) && Equipments[0] != null) //activates when 1 is pressed and the equipment is assigned
         {
-            foreach (GameObject Equipment in Equipments)
+            foreach (GameObject Equipment in Equipments) //goes through all equipments
             {
-                if (Equipment != null)
+                if (Equipment != null) //checks to see if the equipment is assiged
                 {
-                    Equipment.SetActive(false);
+                    Equipment.SetActive(false); //deactivates the equipment
                 }
             }
-            Equipments[0].SetActive(true);
+            Equipments[0].SetActive(true); //activates the desired equipment
         }
 
         //Equip Magic 2
@@ -53,7 +52,7 @@ public class EquipmentSwitcher : MonoBehaviour {
             Equipments[1].SetActive(true);
         }
 
-        //Equip Melee
+        //Equip Magic 3
         if (Input.GetKeyDown(KeyCode.Alpha3) && Equipments[2] != null)
         {
             foreach (GameObject Equipment in Equipments)
@@ -66,7 +65,7 @@ public class EquipmentSwitcher : MonoBehaviour {
             Equipments[2].SetActive(true);
         }
 
-        //Equip Thrown
+        //Equip Melee
         if (Input.GetKeyDown(KeyCode.Alpha4) && Equipments[3] != null)
         {
             foreach (GameObject Equipment in Equipments)
@@ -83,16 +82,16 @@ public class EquipmentSwitcher : MonoBehaviour {
         //None can be active at same time
 
         //Torch
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.F)) //activates if 'F' is pressed
         {
-            if (Torch.activeSelf)
+            if (Torch.activeSelf) //activates if the torch is already active
             {
-                Torch.SetActive(false);
+                Torch.SetActive(false); //deactivates the torch
             }
-            else
+            else //activates if the torch is not active
             {
-                Torch.SetActive(true);
-                Map.SetActive(false);
+                Torch.SetActive(true); //activates the torch
+                Map.SetActive(false); //deactivates the map
             }
         }
 

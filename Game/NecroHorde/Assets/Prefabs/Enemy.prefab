@@ -518,7 +518,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
-  lastTimeDamaged: 0
 --- !u!114 &114805426054816434
 MonoBehaviour:
   m_ObjectHideFlags: 1
