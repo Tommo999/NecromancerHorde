@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightningMagic : MonoBehaviour
 {
 
-    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FPC; //stores the player movement script
+    UnityStandardAssets.Characters.FirstPerson.FirstPersonController FPC; //stores the player movement script
     float baseWalkSpeed; //stores the normal walk speed
     float baseRunSpeed; //stores the normal run speed
 

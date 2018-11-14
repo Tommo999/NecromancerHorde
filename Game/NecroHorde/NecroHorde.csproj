@@ -221,21 +221,6 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2017.4.10f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>Assets/Asset Store/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>Assets/Asset Store/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
-    </Reference>
-    <Reference Include="KdTreeLib">
-      <HintPath>Assets/Asset Store/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
-    </Reference>
-    <Reference Include="pb_Stl">
-      <HintPath>Assets/Asset Store/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
-    </Reference>
-    <Reference Include="Poly2Tri">
-      <HintPath>Assets/Asset Store/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/mt150118/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -247,61 +232,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\Mobile\RFX4_DistortionAndBloom.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\PC\Bloom\Bloom_RFX4.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\PC\Common\ImageEffectHelper_FPS.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\PC\Common\MinAttribute_FPS.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\PC\Common\RenderTextureUtility_FPS.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scene\RFX4_DemoGUI.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scene\RFX4_FPS.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scene\RFX4_MouseOrbit.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scene\RFX4_RealtimeReflection.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_AudioCurves.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_LightCurves.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_PhysicsForceCurves.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_ScaleCurves.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_ShaderColorGradient.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_ShaderFloatCurve.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_ShaderProperties.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\Curves\RFX4_WindCurves.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\EffectSettings\RFX4_EffectSettingColor.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\EffectSettings\RFX4_EffectSettingPhysxForce.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\EffectSettings\RFX4_EffectSettingProjectile.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\EffectSettings\RFX4_EffectSettingsTimeScale.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\EffectSettings\RFX4_EffectSettingVisible.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\ParticleSysem\RFX4_CollisionPropertyDeactiavtion.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\ParticleSysem\RFX4_ParticleCollisionHandler.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\ParticleSysem\RFX4_ParticleLight.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\ParticleSysem\RFX4_ParticleTrail.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\ParticleSysem\RFX4_Turbulence.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_CameraShake.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_ColorHelper.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_CopyPosition.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_DeactivateByTime.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_DeactivateRigidbodyByTime.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_DemoReactivation.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_EffectEvent.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_MaterialQueue.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_OnEnableResetTransform.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_PhysXSetImpulse.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_RaycastCollision.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_ReplaceMaterialByTime.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_ReplaceModelOnCollision.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_RotateAround.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_SimpleDecal.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_StartDelay.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_TextureShaderProperties.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_TornadoParticles.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_TrailRenderer.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_TransformMotion.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_UVAnimation.cs" />
-    <Compile Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Scripts\RFX4_UVScroll.cs" />
-    <Compile Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
-    <Compile Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\IcoBumpin.cs" />
-    <Compile Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Misc\HueCube.cs" />
-    <Compile Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Procedural Mesh\ExtrudeRandomEdges.cs" />
-    <Compile Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Runtime Editing\RuntimeEdit.cs" />
-    <Compile Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Vertex Colors\HighlightNearestFace.cs" />
     <Compile Include="Assets\Asset Store\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\Asset Store\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Asset Store\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -403,101 +333,56 @@
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
-    <Compile Include="Assets\Field.cs" />
-    <Compile Include="Assets\Flame.cs" />
-    <Compile Include="Assets\Flamethrower.cs" />
-    <Compile Include="Assets\PlayerStamina.cs" />
-    <Compile Include="Assets\PlayerUltimate.cs" />
     <Compile Include="Assets\Scripts\ArcaneBeamSpawner.cs" />
     <Compile Include="Assets\Scripts\ArcaneBlock.cs" />
+    <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
     <Compile Include="Assets\Scripts\BossSpawner.cs" />
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
+    <Compile Include="Assets\Scripts\ClassController.cs" />
+    <Compile Include="Assets\Scripts\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\EarthMagic.cs" />
+    <Compile Include="Assets\Scripts\Earthquake.cs" />
+    <Compile Include="Assets\Scripts\EarthquakeArmor.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\EnemyAttacking.cs" />
     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\EnemyHiveMind.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\EnemyTracker.cs" />
     <Compile Include="Assets\Scripts\EnemyWaveController.cs" />
     <Compile Include="Assets\Scripts\EquipmentSwitcher.cs" />
+    <Compile Include="Assets\Scripts\Field.cs" />
+    <Compile Include="Assets\Scripts\FieldOfFlame.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\FireMagic.cs" />
+    <Compile Include="Assets\Scripts\Fist.cs" />
+    <Compile Include="Assets\Scripts\Flame.cs" />
+    <Compile Include="Assets\Scripts\Flamethrower.cs" />
     <Compile Include="Assets\Scripts\GameUI.cs" />
+    <Compile Include="Assets\Scripts\HighScoreAndUnlockController.cs" />
     <Compile Include="Assets\Scripts\ItemBorderScript.cs" />
+    <Compile Include="Assets\Scripts\LightningBallSpawner.cs" />
     <Compile Include="Assets\Scripts\LightningBolt.cs" />
     <Compile Include="Assets\Scripts\LightningMagic.cs" />
+    <Compile Include="Assets\Scripts\LightningRod.cs" />
     <Compile Include="Assets\Scripts\MageMagicSpawnRotation.cs" />
+    <Compile Include="Assets\Scripts\MainMenuScriptController.cs" />
+    <Compile Include="Assets\Scripts\OraOraRotation.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerMana.cs" />
+    <Compile Include="Assets\Scripts\PlayerStamina.cs" />
+    <Compile Include="Assets\Scripts\PlayerUltimate.cs" />
+    <Compile Include="Assets\Scripts\RockinKnocking.cs" />
+    <Compile Include="Assets\Scripts\RotationScriptZeus.cs" />
     <Compile Include="Assets\Scripts\Sword.cs" />
+    <Compile Include="Assets\Scripts\ToolBarImageManager.cs" />
+    <Compile Include="Assets\Scripts\TrackingBolt.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
+    <Compile Include="Assets\Scripts\Zeus.cs" />
+    <Compile Include="Assets\Scripts\ZeusBeam.cs" />
+    <Compile Include="Assets\SpeedBoost.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\Mobile\Resources\RFX4_Bloom.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\Mobile\Resources\RFX4_BloomAdditive.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\Mobile\Resources\RFX4_Bloom_Inc.cginc" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\Mobile\Resources\RFX4_ReplacementPostEffect.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\PC\Bloom\Resources\Bloom_RFX4.cginc" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\PostEffects\PC\Bloom\Resources\Bloom_RFX4.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Readme.txt" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DecalDistortMask.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DecalDistortMaskMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DecalDistortMaskMul.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DecalDistortMaskMulMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DecalMask.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DecalMaskMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_DepthMaskProjector.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_IceDecal.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_IceDecalMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_ProjectorBlended.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Decal\RFX4_ProjectorBlendedMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Portal\NoStencilTransperentDiffuse.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Portal\RFX4_PortalMask.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Portal\RFX4_PortalSky.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Portal\RFX4_PortalStandard.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Portal\RFX4_TranperentDiffuse.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_CutoutBorder.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_CutoutBorderMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_DepthMask.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_DistortionParticles.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_DistortionParticlesAdd.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_DistortionParticlesMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_Ice.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_IceMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_Lava.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_Lightning.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_LightningMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_MobileDiffuse.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_Particle.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_ShaderExtension.cginc" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\RFX4_Tornado.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Water\RFX4_WaterSplash.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Water\RFX4_WaterSplashMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Water\RFX4_WaterSplashTex.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Water\RFX4_WaterSplashTexMobile.shader" />
-    <None Include="Assets\Asset Store\KriptoFX\Realistic Effects Pack v4\Shaders\Water\RFX4_WaterTurbulence.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\About\Font\SIL Open Font License.txt" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\About\ThirdPartyLicenses.txt" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\About\changelog.txt" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\About\pc_AboutEntry_ProBuilder.txt" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\DiffuseTextureBlend.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\DiffuseVertexColor.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_FaceHighlight.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_FacePicker.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_HideVertices.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_NormalPreview.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_ReferenceUnlit.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_StandardVertexColor.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_UnlitSolidColor.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_UnlitVertexColor.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_VertexPicker.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\Shader\pb_VertexShader.shader" />
-    <None Include="Assets\Asset Store\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\Asset Store\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Asset Store\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

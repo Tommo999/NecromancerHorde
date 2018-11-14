@@ -8,10 +8,10 @@ public class PlayerHealth : MonoBehaviour {
     public Slider healthSlider; //the slider on the UI for how much health the player has
 
     public float health; // the players current health
-    public int maxhealth; //the maximum health the player can have
+    public float maxhealth; //the maximum health the player can have
     public float healthRegenRate;
 
-    public float lastTimeHit; //the last time health has been taken from the player
+    float lastTimeHit; //the last time health has been taken from the player
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour {
             FindObjectOfType<GameUI>().Gameover(); //Calls the game over method in the game ui
         }
 
-        if (lastTimeHit < Time.time - 10 && health < 100) //will activate 10 seconds after the player is hit and the player has less than 100 health
+        if (lastTimeHit < Time.time - 5 && health < 100) //will activate 10 seconds after the player is hit and the player has less than 100 health
         {
             health += healthRegenRate * Time.deltaTime; //Regenerates health 10 seconds after being hit
         }

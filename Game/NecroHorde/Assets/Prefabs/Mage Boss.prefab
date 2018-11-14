@@ -223,7 +223,6 @@ GameObject:
   - component: {fileID: 4307736955906780}
   - component: {fileID: 195387549999021700}
   - component: {fileID: 114843976780546136}
-  - component: {fileID: 114514167758216514}
   - component: {fileID: 136410909411046854}
   m_Layer: 0
   m_Name: Mage Boss
@@ -672,7 +671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireRate: 0.2
   ConjureVelocity: 2
-  MageStandingStill: 1
   ArcaneBlock: {fileID: 54646540705834554, guid: 470b79293dab8eb4b8dc222c5db5b624,
     type: 2}
   ArcaneBlockSpawnPoint: {fileID: 0}
@@ -689,23 +687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireRate: 0.2
   ConjureVelocity: 2
-  MageStandingStill: 1
   ArcaneBlock: {fileID: 54646540705834554, guid: 470b79293dab8eb4b8dc222c5db5b624,
     type: 2}
   ArcaneBlockSpawnPoint: {fileID: 0}
---- !u!114 &114514167758216514
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1987510595419960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0210b38c581c20b4bba0186a4302d101, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MinimumRange: 10000
-  MaximumRange: 15
 --- !u!114 &114587587065660546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -719,7 +703,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireRate: 0.2
   ConjureVelocity: 2
-  MageStandingStill: 1
   ArcaneBlock: {fileID: 54646540705834554, guid: 470b79293dab8eb4b8dc222c5db5b624,
     type: 2}
   ArcaneBlockSpawnPoint: {fileID: 0}
@@ -736,7 +719,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireRate: 0.2
   ConjureVelocity: 2
-  MageStandingStill: 1
   ArcaneBlock: {fileID: 54646540705834554, guid: 470b79293dab8eb4b8dc222c5db5b624,
     type: 2}
   ArcaneBlockSpawnPoint: {fileID: 0}

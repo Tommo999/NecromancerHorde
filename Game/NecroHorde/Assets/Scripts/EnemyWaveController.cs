@@ -9,7 +9,7 @@ public class EnemyWaveController : MonoBehaviour {
 
     public BossSpawner BS; //stores the bosses spawner
     public EnemySpawner[] EnemySpawners; //stores the enemy spawner scripts
-    public int Wave = 0; //stores the wave
+    public static int Wave = 0; //stores the wave
     public int KilledThisWave; //stores how many enemies have been killed
     public bool BossKilled; //activates when the boss is killed
     public bool BossSpawned; //activates when the boss is spawned
@@ -20,6 +20,9 @@ public class EnemyWaveController : MonoBehaviour {
     {
         EnemySpawners = FindObjectsOfType<EnemySpawner>(); //assigns the enemy spawners to the variable
         BS = FindObjectOfType<BossSpawner>(); //assigns the boss spawners to the variable
+
+        Wave = 0;
+        KilledThisWave = 0;
     }
 
     private void Update()

@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class ButtonScript : MonoBehaviour {
 
     Scene ThisScene; //stores the current scene for reloading
+    Scene MainMenu; //stores the main menu scene
+
+    public UnityStandardAssets.Characters.FirstPerson.FirstPersonController FPC;
+    public GameObject PauseMenu;
 
     private void Start()
     {
@@ -18,9 +22,17 @@ public class ButtonScript : MonoBehaviour {
         Time.timeScale = 1; //sets the timescale to normal speed
         SceneManager.LoadScene(ThisScene.name); //used to reload the scene
     }
+
+    public void ResumeButton()
+    {
+        Time.timeScale = 1;
+        FPC.enabled = true;
+        PauseMenu.SetActive(false);
+    }
 	
     public void ExitButton() //called when the exit button is pressed
     {
-        Application.Quit(); //Quits the application when it is a full build
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0); //Loads the main menu
     }
 }

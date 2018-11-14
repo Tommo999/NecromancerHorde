@@ -10,17 +10,53 @@ public class EquipmentSwitcher : MonoBehaviour {
     //F to toggle Torch
     //M to toggle Map
 
-    public GameObject[] Equipments = new GameObject[4]; //stores the different equipment in an array
+    public GameObject[] Equipments = new GameObject[4]; //stores the used equipment in an array
+
+    //stores the equipment for different classes
+    public GameObject[] FireEquipment = new GameObject[4];
+    public GameObject[] LightningEquipment = new GameObject[4];
+    public GameObject[] EarthEquipment = new GameObject[4];
+
+    public ClassController ClassC; //stores the class controller for easy calling
 
     public GameObject Torch; //stores the torch
     public GameObject Map; //stores the map
 
     private void Start()
     {
+        ClassC = FindObjectOfType<ClassController>();
+
+        if(ClassC != null)
+        {
+            if(ClassC.ChosenClass == "Fire")
+            {
+                Equipments = FireEquipment;
+            }
+            if(ClassC.ChosenClass == "Lightning")
+            {
+                Equipments = LightningEquipment;
+            }
+            if(ClassC.ChosenClass == "Earth")
+            {
+                Equipments = EarthEquipment;
+            }
+        }
+
         foreach (GameObject Equipment in Equipments) //does the actions for each equipment
         {
             if (Equipment != null) //will activate if the equipment has something assigned
             Equipment.SetActive(false); //makes the equiment uninteractable
+        }
+    }
+
+    public void UnequipAll()
+    {
+        foreach (GameObject Equipment in Equipments) //goes through all equipments
+        {
+            if (Equipment != null) //checks to see if the equipment is assiged
+            {
+                Equipment.SetActive(false); //deactivates the equipment
+            }
         }
     }
 
