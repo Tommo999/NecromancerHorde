@@ -8,19 +8,19 @@ public class ItemBorderScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.Alpha1) && SideImagesPos[0] != null)
+		if(Input.GetButton("Slot 1") && SideImagesPos[0] != null)
         {
             this.transform.position = SideImagesPos[0].position;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2) && SideImagesPos[1] != null)
+        if (Input.GetButton("Slot 2") && SideImagesPos[1] != null)
         {
             this.transform.position = SideImagesPos[1].position;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3) && SideImagesPos[2] != null)
+        if (Input.GetButton("Slot 3") && SideImagesPos[2] != null)
         {
             this.transform.position = SideImagesPos[2].position;
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4) && SideImagesPos[3] != null)
+        if (Input.GetButton("Slot 4") && SideImagesPos[3] != null)
         {
             this.transform.position = SideImagesPos[3].position;
         }

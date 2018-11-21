@@ -20,7 +20,7 @@ public class Flamethrower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButton(0) && Time.time >= LastTimeFired + FireRate &&
+        if (Input.GetAxis("Primary Attack") != 0 && Time.time >= LastTimeFired + FireRate &&
             PM.mana > 0 && ManaDrainPoint < Time.time + 2)
         {
             PM.mana -= ManaDrain * Time.deltaTime;

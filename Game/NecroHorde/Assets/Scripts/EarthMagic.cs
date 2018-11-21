@@ -11,7 +11,7 @@ public class EarthMagic : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && PM.mana > ManaCost) //activates when there is more mana than the cost and the left click is pressed down
+        if (Input.GetAxis("Primary Attack") != 0 && PM.mana > ManaCost) //activates when there is more mana than the cost and the left click is pressed down
         {
             Fire(); //activates the fire method
             PM.mana -= ManaCost; //subtracts the mana cost from the total mana

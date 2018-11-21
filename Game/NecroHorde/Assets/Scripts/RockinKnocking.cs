@@ -16,7 +16,7 @@ public class RockinKnocking : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-            if (Input.GetMouseButton(0) && PM.mana >= 5) //activates when left click is pressed
+            if (Input.GetAxis("Secondary Attack") != 0 && PM.mana >= 5) //activates when left click is pressed
             {
                 LeftyAnim.SetBool("IsSwinging", true); //starts the swinging animation
             }
@@ -25,7 +25,7 @@ public class RockinKnocking : MonoBehaviour {
                 LeftyAnim.SetBool("IsSwinging", false); //stops the swinging animation
             }
 
-            if (Input.GetMouseButton(1) && PM.mana >= 5) //activates when left click is pressed
+            if (Input.GetAxis("Primary Attack") != 0 && PM.mana >= 5) //activates when left click is pressed
             {
                 RightyAnim.SetBool("IsSwinging", true); //starts the swinging animation
             }

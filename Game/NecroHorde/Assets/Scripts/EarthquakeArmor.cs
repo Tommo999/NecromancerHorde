@@ -32,7 +32,7 @@ public class EarthquakeArmor : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<EnemyHealth>() != null && Input.GetKey(KeyCode.W))
+        if (other.gameObject.GetComponent<EnemyHealth>() != null && Input.GetAxis("Vertical") > 0.5f)
         {
             other.GetComponent<EnemyHealth>().Health -= Damage;
             PlayerPrefs.SetFloat("UltimateDamage", PlayerPrefs.GetFloat("UltimateDamage") + Damage);

@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MainMenuScriptController : MonoBehaviour {
 
     [SerializeField] GameObject Main;
+    [SerializeField] Button MainMenuDefaultButton;
     [SerializeField] GameObject ClassSelect;
+    [SerializeField] Button ClassSelectDefaultButton;
     [SerializeField] GameObject HighScore;
+    [SerializeField] Button HighScoreDefaultButton;
     [SerializeField] GameObject Options;
+    [SerializeField] Button OptionsDeaultButton;
     [SerializeField] Scene PlayScene;
     [SerializeField] Slider SensitivityXSlider;
     [SerializeField] Slider SensitivityYSlider;
@@ -27,9 +32,18 @@ public class MainMenuScriptController : MonoBehaviour {
     private void Start()
     {
         OpenMainMenu();
+        MainMenuDefaultButton.Select();
         MusicPlayer = FindObjectOfType<AudioSource>();
         ClassC = FindObjectOfType<ClassController>();
         SetOptions();
+    }
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("Exit Menu"))
+        {
+            OpenMainMenu();
+        }
     }
 
     void SetOptions()
@@ -53,6 +67,8 @@ public class MainMenuScriptController : MonoBehaviour {
         ClassSelect.SetActive(true);
         Options.SetActive(false);
         HighScore.SetActive(false);
+
+        ClassSelectDefaultButton.Select();
     }
 
     public void OpenHighScores()
@@ -61,6 +77,8 @@ public class MainMenuScriptController : MonoBehaviour {
         ClassSelect.SetActive(false);
         Options.SetActive(false);
         HighScore.SetActive(true);
+
+        HighScoreDefaultButton.Select();
     }
 
     public void OpenMainMenu()
@@ -70,6 +88,8 @@ public class MainMenuScriptController : MonoBehaviour {
         Options.SetActive(false);
         HighScore.SetActive(false);
         UnlockPanel.SetActive(false);
+
+        MainMenuDefaultButton.Select();
     }
 
     public void OpenOptionsMenu()
@@ -78,6 +98,8 @@ public class MainMenuScriptController : MonoBehaviour {
         ClassSelect.SetActive(false);
         Options.SetActive(true);
         HighScore.SetActive(false);
+
+        OptionsDeaultButton.Select();
     }
 
     public void OpenUnlockMenu()

@@ -9,13 +9,16 @@ public class FireMagic : MonoBehaviour {
     public Transform FireBallSpawnPos; //stores the position that the fireball is to be spawned at
     public float ManaCost; //how much mana is taken away when it is cast
     public PlayerMana PM; //allows easy access to the player mana
+    float Cooldown = 0.5f;
+    float TimeStamp;
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0) && PM.mana > ManaCost) //activates on left click and when there is enough mana
+        if(Input.GetAxis("Primary Attack") != 0 && PM.mana > ManaCost && Time.time > TimeStamp + Cooldown) //activates on left click and when there is enough mana
         {
             Fire(); //calls the fireball throwing method
             PM.mana -= ManaCost; //takes away the mana cost from the total mana pool
+            TimeStamp = Time.time;
         }
     }
 

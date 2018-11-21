@@ -26,7 +26,7 @@ public class LightningMagic : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButton(0) && PM.mana > 0 && Time.time > ManaDrainPoint + 1.5f) //activates when mouse button pressed down
+        if (Input.GetAxis("Primary Attack") != 0 && PM.mana > 0 && Time.time > ManaDrainPoint + 1.5f) //activates when mouse button pressed down
         {
             Fire(); //fires the lightning magic
             PM.mana -= ManaDrain * Time.deltaTime; //takes away mana at a constant rate
@@ -34,7 +34,7 @@ public class LightningMagic : MonoBehaviour
             FPC.m_RunSpeed = 0; //sets the run speed to 0
         }
 
-        if (Input.GetMouseButtonUp(0)) //activates when left click let go of
+        if (Input.GetAxis("Primary Attack") == 0) //activates when left click let go of
         {
             FPC.m_WalkSpeed = baseWalkSpeed; //resets the walk speed
             FPC.m_RunSpeed = baseRunSpeed; //resets the run speed

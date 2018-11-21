@@ -22,7 +22,7 @@ public class LightningRod : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButton(0) && LastTimeFired + FireRate <= Time.time)
+        if (Input.GetAxis("Primary Attack") != 0 && LastTimeFired + FireRate <= Time.time && PM.mana > ManaCost)
         {
             Fire();
             PM.mana -= ManaCost;

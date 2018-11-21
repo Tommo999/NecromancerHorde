@@ -198,7 +198,16 @@ public class HighScoreAndUnlockController : MonoBehaviour {
 
     public void ResetAll()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("FireKills");
+        PlayerPrefs.DeleteKey("LightningKills");
+        PlayerPrefs.DeleteKey("EarthKills");
+
+        PlayerPrefs.DeleteKey("FireRounds");
+        PlayerPrefs.DeleteKey("LightningRounds");
+        PlayerPrefs.DeleteKey("EarthRounds");
+
+        PlayerPrefs.DeleteKey("UltimateDamage");
+        PlayerPrefs.DeleteKey("OverallKills");
 
         AreYouSure.SetActive(false);
 

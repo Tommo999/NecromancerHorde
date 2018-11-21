@@ -1,6 +1,6 @@
-WindowsStandalone
+WebGL
 PlayerPath?
-C:/Users/mt150118/Desktop/NecroHorde/NecroHorde.exe
+C:/Users/mt150118/Desktop/NecroHorde web
 SceneListBegin?
 Assets/Scene/Main Menu.unity
 Assets/Scene/Test.unity

@@ -17,7 +17,7 @@ public class Field : MonoBehaviour {
         if (other.gameObject.GetComponent<EnemyHealth>() != null)
         {
             other.gameObject.GetComponent<EnemyHealth>().Health -= Damage * Time.deltaTime;
-            PlayerPrefs.SetFloat("UltimateDamage", Damage * Time.deltaTime);
+            PlayerPrefs.SetFloat("UltimateDamage", PlayerPrefs.GetFloat("UltimateDamage") + (Damage * Time.deltaTime));
         }
     }
 }

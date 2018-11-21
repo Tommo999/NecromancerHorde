@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //Allows the use of UI elements
+using UnityEngine.EventSystems;
 
 public class GameUI : MonoBehaviour {
 
     public GameObject PauseMenu;
+    public Button ResumeButton;
     public GameObject Scoreboard; //the scoreboard panel
     public GameObject GameoverScreen; //the game over panel
+    public Button RestartButton;
     public Text PointsText; //the text for the points
     public Text EliminationsText; //the text for the eliminations
 
@@ -38,7 +41,34 @@ public class GameUI : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (isPaused && Input.anyKeyDown)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        if (Input.GetButtonDown("Pause Controller"))
+        {
+            if (!isPaused)
+            {
+                PauseMenu.SetActive(true);
+                isPaused = true;
+                Time.timeScale = 0;
+                FPC.enabled = false;
+                ResumeButton.Select();
+            }
+            else if (isPaused)
+            {
+                PauseMenu.SetActive(false);
+                isPaused = false;
+                Time.timeScale = 1;
+                FPC.enabled = true;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
+
+        if (Input.GetButtonDown("Pause Keyboard"))
         {
             if (!isPaused)
             {
@@ -60,11 +90,11 @@ public class GameUI : MonoBehaviour {
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab)) //activates when tab pressed
+        if (Input.GetButtonDown("View Leaderboard")) //activates when tab pressed
         {
             Scoreboard.SetActive(true); //activates the score board
         }
-        if(Input.GetKeyUp(KeyCode.Tab) && !isGameover) //activates when tab let go when the game isnt over
+        if(Input.GetButtonUp("View Leaderboard") && !isGameover) //activates when tab let go when the game isnt over
         {
             Scoreboard.SetActive(false); //deactivates the score board
         }
@@ -79,9 +109,10 @@ public class GameUI : MonoBehaviour {
         Scoreboard.SetActive(true); //activates the scoreboard
         PauseMenu.SetActive(false);
         isGameover = true; //sets it to game over
-
+        
         if (!GameOverDone)
         {
+            RestartButton.Select();
             if (PlayerPrefs.HasKey("OverallKills"))
             {
                 PlayerPrefs.SetInt("OverallKills", PlayerPrefs.GetInt("OverallKills") + Eliminations);

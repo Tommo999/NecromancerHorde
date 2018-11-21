@@ -63,7 +63,7 @@ public class EquipmentSwitcher : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         //Equip Magic 1
-		if (Input.GetKeyDown(KeyCode.Alpha1) && Equipments[0] != null) //activates when 1 is pressed and the equipment is assigned
+		if (Input.GetButtonDown("Slot 1") && Equipments[0] != null) //activates when 1 is pressed and the equipment is assigned
         {
             foreach (GameObject Equipment in Equipments) //goes through all equipments
             {
@@ -76,7 +76,7 @@ public class EquipmentSwitcher : MonoBehaviour {
         }
 
         //Equip Magic 2
-        if (Input.GetKeyDown(KeyCode.Alpha2) && Equipments[1] != null)
+        if (Input.GetButtonDown("Slot 2") && Equipments[1] != null)
         {
             foreach (GameObject Equipment in Equipments)
             {
@@ -89,7 +89,7 @@ public class EquipmentSwitcher : MonoBehaviour {
         }
 
         //Equip Magic 3
-        if (Input.GetKeyDown(KeyCode.Alpha3) && Equipments[2] != null)
+        if (Input.GetButtonDown("Slot 3") && Equipments[2] != null)
         {
             foreach (GameObject Equipment in Equipments)
             {
@@ -102,7 +102,7 @@ public class EquipmentSwitcher : MonoBehaviour {
         }
 
         //Equip Melee
-        if (Input.GetKeyDown(KeyCode.Alpha4) && Equipments[3] != null)
+        if (Input.GetButtonDown("Slot 4") && Equipments[3] != null)
         {
             foreach (GameObject Equipment in Equipments)
             {

@@ -333,6 +333,8 @@
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
+    <Compile Include="Assets\Hammer.cs" />
+    <Compile Include="Assets\HammerWall.cs" />
     <Compile Include="Assets\Scripts\ArcaneBeamSpawner.cs" />
     <Compile Include="Assets\Scripts\ArcaneBlock.cs" />
     <Compile Include="Assets\Scripts\BackgroundMusic.cs" />
